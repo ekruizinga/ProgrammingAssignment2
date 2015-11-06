@@ -53,4 +53,4 @@ cacheSolve <- function(x) {
     return(inverted)
 }
 
-# This code was inspired by the example on caching the mean of vector provided in the course material and many examples on Github. 
+# This code was inspired by the example on caching the mean of vector (provided in the course material) and many examples on Github. 
