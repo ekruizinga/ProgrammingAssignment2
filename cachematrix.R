@@ -5,7 +5,8 @@
 # matrix is a good idea if you have to use the inverse more than a few times or so  (there are
 # also alternatives to matrix inversion that are not implemented here).
 
-#This is a pair of functions that caches a matrix inverse. The input must be a square matrix, otherwise you'll get an error message.
+# This is a pair of functions that caches a matrix inverse. The input must be a square matrix, otherwise you'll get an
+# error message.
 
 # About the following function:
 #
@@ -52,4 +53,4 @@ cacheSolve <- function(x) {
     return(inverted)
 }
 
-#This code was inspired by the example on caching the mean of vector provided in the course material and many examples on Github. 
+# This code was inspired by the example on caching the mean of vector provided in the course material and many examples on Github. 
