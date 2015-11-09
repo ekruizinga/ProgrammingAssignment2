@@ -17,10 +17,10 @@
 # 4. get the inverted matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-    inverted <- NULL
+    inverted <- NULL # set an empty data structure.
     set <- function(y) {
-        x <<- y
-        inverted <<- NULL
+        x <<- y           #make data structure available across functions.
+        inverted <<- NULL #make data structure available across functions.
     }
     get <- function() x
     setinverse <- function(inverse) inverted <<- inverse
@@ -42,8 +42,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x) {
     inverted <- x$getinverse()
-    if(!is.null(inverted)) {
-        message("I have something in cache for you, fetching it...")
+    if(!is.null(inverted)) { #if I don't have a NULL data structure for inverted, I can proceed.
+        message("I have something in cache for you, fetching it...") 
         return(inverted)
     }
     message("Alas, no cache available, so I have to compute an inverse for you...")
@@ -54,3 +54,4 @@ cacheSolve <- function(x) {
 }
 
 # This code was inspired by the example on caching the mean of vector (provided in the course material) and many examples on Github. 
+# including Sefak Ilic: https://github.com/sefakilic/coursera-rprog-assignment2/blob/master/cachematrix.R and also 
