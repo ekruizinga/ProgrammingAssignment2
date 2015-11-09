@@ -56,4 +56,5 @@ cacheSolve <- function(x) {
 }
 
 # This code was inspired by the example on caching the mean of vector (provided in the course material) and many examples on Github. 
-# including Sefak Ilic: https://github.com/sefakilic/coursera-rprog-assignment2/blob/master/cachematrix.R and also 
+# including Sefak Ilic: https://github.com/sefakilic/coursera-rprog-assignment2/blob/master/cachematrix.R and also
+# https://guides.github.com/introduction/getting-your-project-on-github/
