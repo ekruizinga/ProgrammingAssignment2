@@ -26,6 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
     setinverse <- function(inverse) inverted <<- inverse
     getinverse <- function() inverted
     list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
+    
+    #create special "vector" (really a list for the inverse handling function) 
 }
 
 # NOTE: the <<- syntax used within the function above ensures that the x and inv
@@ -44,13 +46,13 @@ cacheSolve <- function(x) {
     inverted <- x$getinverse()
     if(!is.null(inverted)) { #if I don't have a NULL data structure for inverted, I can proceed.
         message("I have something in cache for you, fetching it...") 
-        return(inverted)
+        return(inverted) #present the result
     }
     message("Alas, no cache available, so I have to compute an inverse for you...")
-    data <- x$get()
-    inverted <- solve(data)
-    x$setinverse(inverted)
-    return(inverted)
+    data <- x$get() #so I need to work on data that is provided to me, so set them to a structure called 'data'
+    inverted <- solve(data) #do the inversion and assign to 'inverted'
+    x$setinverse(inverted) #then set the inverse in the cache
+    return(inverted) #present the result
 }
 
 # This code was inspired by the example on caching the mean of vector (provided in the course material) and many examples on Github. 
