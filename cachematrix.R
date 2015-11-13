@@ -58,3 +58,22 @@ cacheSolve <- function(x) {
 # This code was inspired by the example on caching the mean of vector (provided in the course material) and many examples on Github. 
 # including Sefak Ilic: https://github.com/sefakilic/coursera-rprog-assignment2/blob/master/cachematrix.R and also
 # https://guides.github.com/introduction/getting-your-project-on-github/
+
+# A test run provides this:
+# create some matrix by e.g. b = matrix(c2, 4, 5, 1), nrow = 2, ncol = 2)
+# the matrix looks like this:
+# > b
+#     [,1] [,2]
+# [1,]    2    5
+# [2,]    4    1
+# prepare via makeCacheMatrix, setup = makeCacheMatrix(b)
+# then do cacheSolve(setup). It should say:
+# Alas, no cache available, so I have to compute an inverse for you...
+#           [,1]       [,2]
+# [1,] -0.05555556  0.2777778
+# [2,]  0.22222222 -0.1111111
+# then, rerun, so again do: cacheSolve(setup). It now should say:
+# I have something in cache for you, fetching it...
+#            [,1]       [,2]
+# [1,] -0.05555556  0.2777778
+# [2,]  0.22222222 -0.1111111
